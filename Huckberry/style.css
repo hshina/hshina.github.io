@@ -1,0 +1,45 @@
+body {
+    font-family: 'Lato', sans-serif;
+    padding: 0px;
+    margin: 0px;
+}
+
+nav {
+    background-color: #f9f5ff;
+    color: rgb(255, 113, 139);
+    padding: 20px 50px;
+
+}
+
+.navTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search {
+    position: relative;
+    width: 450px;
+}
+
+.search input[type="text"] {
+    width: 100%;
+    padding: 10px 12px 10px 38px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+.search .searchIcon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.6;
+}
+
+.cartIcon {
+    position: relative;
+    font-size: 24px;
+    cursor: pointer;
+}
