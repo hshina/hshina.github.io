@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Huckberry</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="product.css">
+</head>
+<body>
+    <nav>
+        <div class="navTopWrapper">
+            <div class="navTop">
+                <div class="navitem">
+                    <img src="./img/huckberry.png" alt="Huckberry" onclick="window.location.href='index.html'" style="cursor: pointer;">
+                </div>
+                <div class="navitem">
+                    <div class="search">
+                        <input type="text" placeholder="What are you looking for?" class="searchInput">
+                        <img src="./img/search-icon.png" width="20" height="20" alt="Search Icon" class="searchIcon"> 
+                    </div>
+                </div>
+                <div class="navitem">
+                    <img src="./img/cart-icon.png" width="20" height="20" alt="Cart" class="cartIcon">
+                </div>
+            </div>
+        </div>
+        <div class="navBottom">
+            <h3 class="menuItem" onclick="window.location.href='index.html'">Stationery</h3>
+            <h3 class="menuItem" onclick="window.location.href='index.html'">Gifts & Collectibles</h3>
+        </div>
+    </nav>
+
+    <div class="productDetailContainer">
+        <div class="productDetail">
+            <div class="productImageSection">
+                <img id="productMainImage" src="./img/pusheens.jpg" alt="Product" class="productDetailImage">
+            </div>
+            <div class="productInfoSection">
+                <h1 id="productTitle" class="productDetailTitle">Mini Pusheen Plush</h1>
+                <p id="productPrice" class="productDetailPrice">$24.99</p>
+                <div class="productDescription">
+                    <h3>Description</h3>
+                    <p id="productDesc">This adorable Mini Pusheen plush is perfect for collectors and cat lovers alike! Super soft and huggable, this little companion brings joy wherever it goes. Made with high-quality materials for lasting cuteness.</p>
+                </div>
+                <div class="productQuantity">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" value="1" min="1" max="10">
+                </div>
+                <button class="addToCartBtnLarge">Add to Cart</button>
+                <button class="backButton" onclick="window.location.href='index.html'">← Back to Shop</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="product.js"></script>
+</body>
+</html>

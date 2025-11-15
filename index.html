@@ -7,28 +7,81 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
+
     <nav>   
-    <div class="navTop">
+        <div class="navTop">
 
-        <div class="navitem">
-            <img src="./img/huckberry.png" alt="Huckberry">
-        </div>
+            <div class="navitem">
+                <img src="./img/huckberry.png" alt="Huckberry">
+            </div>
 
-        <div class="navitem">
-            <div class="search">
-                <input type="text" placeholder="What are you looking for?" class="searchInput">
-                <img src="./img/search-icon.png" width="20" height="20" alt="Search Icon" class="searchIcon"> 
+            <div class="navitem">
+                <div class="search">
+                    <input type="text" placeholder="What are you looking for?" class="searchInput">
+                    <img src="./img/search-icon.png" width="20" height="20" alt="Search Icon" class="searchIcon"> 
+                </div>
+            </div>
+
+            <div class="navitem">
+                <img src="./img/cart-icon.png" width="20" height="20" alt="Cart" class="cartIcon">
             </div>
         </div>
+        <div class="navBottom">
+            <h3 class="menuItem">Stationery</h3>
+            <h3 class="menuItem">Gifts & Collectibles</h3>
+        </div>
+    </nav>
 
-        <div class="navitem">
-            <img src="./img/cart-icon.png" width="20" height="20" alt="Cart" class="cartIcon">
+    <div class="slider">
+        <div class="slide">
+            <img src="./img/pusheens.jpg" class="sliderImage">
+        </div>
+        <div class="slide">
+            <img src="./img/color-pens.jpg" class="sliderImage">
+        </div>
+        <div class="slide">
+            <img src="./img/planner.jpg" class="sliderImage">
+        </div>
+
+        <div class="heroContent">
+            <h1 class="heroTitle">Cute Essentials</h1>
+            <p class="heroDesc">
+                Make every day more productive with our cute stationery and collectibles.
+            </p>
+            <button class="heroButton" onclick="window.location.href='shop.html'"">Shop All →</button>
         </div>
     </div>
-    <div class="navBottom"></div>
-</nav>
 
+
+    <section class="featuredProducts">
+        <h2 class="sectionTitle">Featured Products</h2>
+        <div class="productsGrid">
+            <div class="productCard" onclick="window.location.href='product.html?id=1'">
+                <img src="./img/pusheens.jpg" alt="Product 1" class="productImage">
+                <h3 class="productName">Mini Pusheen Plush</h3>
+                <p class="productPrice">$24.99</p>
+            </div>
+            <div class="productCard" onclick="window.location.href='product.html?id=2'">
+                <img src="./img/color-pens.jpg" alt="Product 2" class="productImage">
+                <h3 class="productName">Colorful Gel Pen Set</h3>
+                <p class="productPrice">$15.99</p>
+            </div>
+            <div class="productCard" onclick="window.location.href='product.html?id=3'">
+                <img src="./img/planner.jpg" alt="Product 3" class="productImage">
+                <h3 class="productName">Weekly Planner</h3>
+                <p class="productPrice">$12.99</p>
+            </div>
+            <div class="productCard" onclick="window.location.href='product.html?id=4'">
+                <img src="./img/keychains.png" alt="Product 4" class="productImage">
+                <h3 class="productName">Sanrio Keychains</h3>
+                <p class="productPrice">$9.99</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="app.js"></script>
 </body>
 </html>

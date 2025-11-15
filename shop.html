@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop All - Huckberry</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="shop.css">
+</head>
+<body>
+    <nav>
+        <div class="navTopWrapper">
+            <div class="navTop">
+                <div class="navitem">
+                    <img src="./img/huckberry.png" alt="Huckberry" onclick="window.location.href='index.html'" style="cursor: pointer;">
+                </div>
+                <div class="navitem">
+                    <div class="search">
+                        <input type="text" placeholder="What are you looking for?" class="searchInput">
+                        <img src="./img/search-icon.png" width="20" height="20" alt="Search Icon" class="searchIcon"> 
+                    </div>
+                </div>
+                <div class="navitem">
+                    <img src="./img/cart-icon.png" width="20" height="20" alt="Cart" class="cartIcon">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="shopContainer">
+        
+        <aside class="sidebar">
+            <h2 class="sidebarTitle">Filters</h2>
+            
+            
+            <div class="filterSection">
+                <h3 class="filterTitle">Categories</h3>
+                <div class="filterOptions">
+                    <label class="filterOption">
+                        <input type="checkbox" value="all" class="categoryFilter" checked>
+                        <span>All Products</span>
+                    </label>
+                    <label class="filterOption">
+                        <input type="checkbox" value="stationery" class="categoryFilter">
+                        <span>Stationery</span>
+                    </label>
+                    <label class="filterOption">
+                        <input type="checkbox" value="gifts" class="categoryFilter">
+                        <span>Gifts & Collectibles</span>
+                    </label>
+                </div>
+            </div>
+
+    
+            <div class="filterSection">
+                <h3 class="filterTitle">Price Range</h3>
+                <div class="filterOptions">
+                    <label class="filterOption">
+                        <input type="checkbox" value="all" class="priceFilter" checked>
+                        <span>All Prices</span>
+                    </label>
+                    <label class="filterOption">
+                        <input type="checkbox" value="0-10" class="priceFilter">
+                        <span>Under $10</span>
+                    </label>
+                    <label class="filterOption">
+                        <input type="checkbox" value="10-20" class="priceFilter">
+                        <span>$10 - $20</span>
+                    </label>
+                    <label class="filterOption">
+                        <input type="checkbox" value="20-30" class="priceFilter">
+                        <span>$20 - $30</span>
+                    </label>
+                    <label class="filterOption">
+                        <input type="checkbox" value="30+" class="priceFilter">
+                        <span>$30+</span>
+                    </label>
+                </div>
+            </div>
+
+            <button class="clearFilters">Clear All Filters</button>
+        </aside>
+
+    
+        <main class="shopMain">
+            <div class="shopHeader">
+                <h1 class="shopTitle">All Products</h1>
+                <p class="productCount"><span id="productCount">8</span> products found</p>
+            </div>
+
+            <div class="shopProductsGrid" id="productsGrid">
+                <!-- Products will be dynamically loaded here -->
+            </div>
+        </main>
+    </div>
+
+    <script src="shop.js"></script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+/* Shop Page Layout */
+.shopContainer {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 40px;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 40px 50px;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    position: sticky;
+    top: 140px;
+    height: fit-content;
+    background-color: #f9f5ff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.sidebarTitle {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ff718b;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #ff718b;
+}
+
+.filterSection {
+    margin-bottom: 30px;
+}
+
+.filterTitle {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.filterOptions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.filterOption {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #555;
+    transition: color 0.2s ease;
+}
+
+.filterOption:hover {
+    color: #ff718b;
+}
+
+.filterOption input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: #ff718b;
+}
+
+.clearFilters {
+    width: 100%;
+    background-color: transparent;
+    color: #ff718b;
+    border: 2px solid #ff718b;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.clearFilters:hover {
+    background-color: #ff718b;
+    color: white;
+}
+
+/* Main Content */
+.shopMain {
+    min-height: 80vh;
+}
+
+.shopHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.shopTitle {
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+}
+
+.productCount {
+    font-size: 16px;
+    color: #777;
+}
+
+.shopProductsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* Product Card Styles (reusing from main page) */
+.shopProductCard {
+    background-color: #f9f5ff;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.shopProductCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(255, 113, 139, 0.2);
+}
+
+.shopProductImage {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.shopProductName {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.shopProductCategory {
+    font-size: 14px;
+    color: #ff718b;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.shopProductPrice {
+    font-size: 22px;
+    font-weight: 700;
+    color: #ff718b;
+    margin-bottom: 15px;
+}
+
+.colorVariants {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.colorDot {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.colorDot:hover {
+    transform: scale(1.2);
+}
+
+.noProducts {
+    text-align: center;
+    padding: 60px 20px;
+    color: #999;
+    font-size: 18px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .shopContainer {
+        grid-template-columns: 250px 1fr;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .shopContainer {
+        grid-template-columns: 1fr;
+    }
+    
+    .sidebar {
+        position: relative;
+        top: 0;
+    }
+    
+    .shopHeader {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}

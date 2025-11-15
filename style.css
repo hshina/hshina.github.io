@@ -6,15 +6,52 @@ body {
 
 nav {
     background-color: #f9f5ff;
-    color: rgb(255, 113, 139);
+    color: #ff718b;
     padding: 20px 50px;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 100;
 
+}
+
+.navitem img[alt="Huckberry"] {
+    height: 100px;
+    width: auto;
+    object-fit: contain;
+    position: relative;
+    z-index: 10;
 }
 
 .navTop {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.navTop .navitem {
+    flex: 1;
+    display: flex;
+}
+
+.navTop .navitem:first-child {
+    justify-content: flex-start;
+    position: relative;
+    z-index: 10;
+}
+
+.navTop .navitem:nth-child(2) {
+    justify-content: center;
+}
+
+.navTop .navitem:last-child {
+    justify-content: flex-end;
+}
+
+.navBottom {
+    margin-top: 15px;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
 }
 
 .search {
@@ -42,4 +79,157 @@ nav {
     position: relative;
     font-size: 24px;
     cursor: pointer;
+}
+
+.menuItem {
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide:first-child {
+    opacity: 1;
+}
+
+.sliderImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.heroContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: rgb(255, 113, 139);
+    z-index: 10;
+    background-color: rgba(249, 245, 255, 0.9);
+    padding: 40px 60px;
+    border-radius: 15px;
+}
+
+.heroTitle {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.heroDesc {
+    font-size: 20px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.heroButton {
+    background-color: rgb(255, 113, 139);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.heroButton:hover {
+    background-color: rgb(235, 93, 119);
+}
+
+.featuredProducts {
+    padding: 60px 50px;
+    background-color: #ffffff;
+}
+
+.sectionTitle {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    color: #ff718b;
+    margin-bottom: 40px;
+}
+
+.productsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.productCard {
+    background-color: #f9f5ff;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.productCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(255, 113, 139, 0.2);
+}
+
+.productImage {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.productName {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.productPrice {
+    font-size: 22px;
+    font-weight: 700;
+    color: #ff718b;
+    margin-bottom: 15px;
+}
+
+
+@media (max-width: 1200px) {
+    .productsGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .productsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .productsGrid {
+        grid-template-columns: 1fr;
+    }
 }
